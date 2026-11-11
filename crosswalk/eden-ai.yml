@@ -1,0 +1,16 @@
+provider: eden-ai
+apis_io: https://apis.io/providers/eden-ai/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - ocr
+    properties:
+      document_url:
+      - file
+      - file_url
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/eden-ai-ocr-features-openapi.json#POST /ocr/ocr/
+    - openapi/_original/eden-ai-openapi.yml#POST /ocr/ocr

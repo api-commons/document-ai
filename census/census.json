@@ -1,0 +1,2661 @@
+{
+ "cohort_size": 132,
+ "unreadable": [],
+ "concepts": {
+  "extraction": {
+   "adobe": {
+    "segments": [
+     "ocr"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "assetID": "string",
+     "ocrLang": "string",
+     "ocrType": "string",
+     "notifiers": "array",
+     "status": "string",
+     "asset": "object",
+     "error": "object",
+     "ocrLanguage": "string"
+    },
+    "evidence": [
+     "openapi/_original/adobe-pdf-services-api-openapi-official.json#POST /operation/ocr",
+     "openapi/_original/adobe-pdf-services-api-openapi.yml#POST /operation/ocr"
+    ]
+   },
+   "automat": {
+    "segments": [
+     "extract"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "data": "object"
+    },
+    "evidence": [
+     "openapi/_original/automat-extract-openapi.json#POST /api/extract"
+    ]
+   },
+   "chunkr-ai": {
+    "segments": [
+     "extract",
+     "parse"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "completed": "boolean",
+     "configuration": "object",
+     "created_at": "string",
+     "expires_at": [
+      "string",
+      "null"
+     ],
+     "file_info": "object",
+     "finished_at": [
+      "string",
+      "null"
+     ],
+     "input_file_url": [
+      "string",
+      "null"
+     ],
+     "message": "string",
+     "output": null,
+     "parse_task_id": [
+      "string",
+      "null"
+     ],
+     "started_at": [
+      "string",
+      "null"
+     ],
+     "status": "string",
+     "task_id": "string",
+     "task_type": "string",
+     "task_url": [
+      "string",
+      "null"
+     ],
+     "version_info": "object",
+     "parse_configuration": null,
+     "schema": "object",
+     "system_prompt": [
+      "string",
+      "null"
+     ],
+     "expires_in": [
+      "integer",
+      "null"
+     ],
+     "file": "string",
+     "file_name": [
+      "string",
+      "null"
+     ],
+     "chunk_processing": null,
+     "error_handling": null,
+     "ocr_strategy": null,
+     "pipeline": null,
+     "segment_processing": null,
+     "segmentation_strategy": null
+    },
+    "evidence": [
+     "openapi/_original/chunkr-ai-openapi.json#GET /tasks/{task_id}/extract",
+     "openapi/_original/chunkr-ai-openapi.json#GET /tasks/{task_id}/parse",
+     "openapi/_original/chunkr-ai-openapi.json#POST /tasks/extract",
+     "openapi/_original/chunkr-ai-openapi.json#POST /tasks/parse"
+    ]
+   },
+   "convertapi": {
+    "segments": [
+     "extract",
+     "ocr"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "FileName": "string",
+     "FileExt": "string",
+     "FileSize": "integer",
+     "FileId": "string",
+     "Url": "string",
+     "FileData": "string"
+    },
+    "evidence": [
+     "openapi/_original/openapi.json#POST /convert/email/to/extract",
+     "openapi/_original/openapi.json#POST /convert/pdf/to/extract",
+     "openapi/_original/openapi.json#POST /convert/pdf/to/ocr",
+     "openapi/_original/openapi.json#POST /convert/zip/to/extract"
+    ]
+   },
+   "diffbot": {
+    "segments": [
+     "analyze"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "date": "string",
+     "sentiment": "number",
+     "images": "array",
+     "author": "string",
+     "estimatedDate": "string",
+     "publisherRegion": "string",
+     "icon": "string",
+     "diffbotUri": "string",
+     "siteName": "string",
+     "type": "string",
+     "title": "string",
+     "tags": "array",
+     "publisherCountry": "string",
+     "humanLanguage": "string",
+     "authorUrl": "string",
+     "pageUrl": "string",
+     "html": "string",
+     "categories": "array",
+     "text": "string",
+     "authors": "array"
+    },
+    "evidence": [
+     "openapi/_original/diffbot-extract-openapi.json#GET /analyze",
+     "openapi/_original/diffbot-openapi.yml#GET /v3/analyze"
+    ]
+   },
+   "docupanda": {
+    "segments": [
+     "analyses",
+     "extractions"
+    ],
+    "operations": [
+     "DELETE collection",
+     "GET collection"
+    ],
+    "properties": {
+     "analysisId": "string",
+     "jobId": "string",
+     "documentIds": "array",
+     "filename": "string",
+     "dataset": "string",
+     "schemaId": "string",
+     "numDocs": "integer",
+     "pages": "array",
+     "data": "array",
+     "timestamp": "string",
+     "success": "boolean",
+     "analysisIds": "array",
+     "extractionId": "string",
+     "extractionType": "string",
+     "reasoning": "string",
+     "sourceStandardizationIds": "array",
+     "schemaName": "string"
+    },
+    "evidence": [
+     "openapi/_original/docupanda-docupipe-openapi.yml#DELETE /analyses",
+     "openapi/_original/docupanda-docupipe-openapi.yml#GET /analyses",
+     "openapi/_original/docupanda-docupipe-openapi.yml#GET /extractions"
+    ]
+   },
+   "done": {
+    "segments": [
+     "extract"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "api_version": "string",
+     "url": "string",
+     "final_url": "string",
+     "status_code": "integer",
+     "title_tag": "string",
+     "meta_description": "string",
+     "meta_keywords": "string",
+     "meta_robots": "string",
+     "canonical_tag": "string",
+     "h1_tags": "array",
+     "h2_tags": "array",
+     "h3_tags": "array",
+     "num_links": "integer",
+     "timeout_seconds": "integer",
+     "lastmod": null,
+     "changefreq": null,
+     "priority": null,
+     "sitemap_url": "string"
+    },
+    "evidence": [
+     "openapi/_original/done-seo-data-extractor-openapi.json#POST /extract",
+     "openapi/_original/done-seo-data-extractor-openapi.yml#POST /extract",
+     "openapi/_original/done-sitemap-url-extractor-openapi.json#POST /extract",
+     "openapi/_original/done-sitemap-url-extractor-openapi.yml#POST /extract"
+    ]
+   },
+   "eden-ai": {
+    "segments": [
+     "ocr"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "api4ai": "object",
+     "clarifai": "object",
+     "amazon": "object",
+     "microsoft": "object",
+     "mistral": "object",
+     "google": "object",
+     "sentisight": "object",
+     "base64": "object",
+     "settings": "string",
+     "providers": "array",
+     "fallback_providers": "array",
+     "response_as_dict": "boolean",
+     "attributes_as_list": "boolean",
+     "show_base_64": "boolean",
+     "show_original_response": "boolean",
+     "file": "string",
+     "file_url": "string",
+     "file_password": "string",
+     "language": "string"
+    },
+    "evidence": [
+     "openapi/_original/eden-ai-ocr-features-openapi.json#POST /ocr/ocr/",
+     "openapi/_original/eden-ai-openapi.yml#POST /ocr/ocr"
+    ]
+   },
+   "extend-ai": {
+    "segments": [
+     "parse",
+     "extract"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "object": "string",
+     "id": "string",
+     "batchId": [
+      "string",
+      "null"
+     ],
+     "file": null,
+     "status": "string",
+     "failureReason": [
+      "string",
+      "null"
+     ],
+     "failureMessage": [
+      "string",
+      "null"
+     ],
+     "metadata": null,
+     "output": null,
+     "outputUrl": [
+      "string",
+      "null"
+     ],
+     "metrics": null,
+     "config": "object",
+     "usage": null,
+     "dataRetention": "object",
+     "initialOutput": null,
+     "reviewedOutput": null,
+     "reviewed": "boolean",
+     "edited": "boolean",
+     "edits": [
+      "object",
+      "null"
+     ],
+     "extractor": null,
+     "extractorVersion": null,
+     "files": [
+      "array",
+      "null"
+     ],
+     "parseRunId": [
+      "string",
+      "null"
+     ],
+     "dashboardUrl": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "package": "object"
+    },
+    "evidence": [
+     "openapi/_original/extend-ai-openapi.yml#POST /extract",
+     "openapi/_original/extend-ai-openapi.yml#POST /parse"
+    ]
+   },
+   "firecrawl": {
+    "segments": [
+     "extract",
+     "parse"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "markdown": "string",
+     "summary": "string",
+     "html": "string",
+     "rawHtml": "string",
+     "screenshot": "string",
+     "audio": "string",
+     "links": "array",
+     "actions": "object",
+     "metadata": "object",
+     "warning": "string",
+     "changeTracking": "object",
+     "branding": "object",
+     "success": "boolean",
+     "id": "string",
+     "invalidURLs": "array",
+     "urls": "array",
+     "prompt": "string",
+     "schema": "object",
+     "enableWebSearch": "boolean",
+     "ignoreSitemap": "boolean",
+     "includeSubdomains": "boolean",
+     "showSources": "boolean",
+     "scrapeOptions": "object",
+     "ignoreInvalidURLs": "boolean",
+     "data": "object",
+     "status": "string",
+     "expiresAt": "string",
+     "tokensUsed": "integer"
+    },
+    "evidence": [
+     "openapi/_original/firecrawl-openapi-original.json#GET /extract/{id}",
+     "openapi/_original/firecrawl-openapi-original.json#POST /extract",
+     "openapi/_original/firecrawl-openapi-original.json#POST /parse"
+    ]
+   },
+   "gonitro": {
+    "segments": [
+     "extractions"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "pageIndex": "integer",
+     "fieldType": "string",
+     "name": "string",
+     "value": "string",
+     "boundingBox": "array",
+     "choices": "array"
+    },
+    "evidence": [
+     "openapi/_original/gonitro-pdf-services-openapi.json#POST /extractions",
+     "openapi/_original/gonitro-sign-openapi.json#POST /extractions"
+    ]
+   },
+   "hyperbrowser": {
+    "segments": [
+     "extract"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "jobId": "string",
+     "urls": "array",
+     "systemPrompt": "string",
+     "maxLinks": "number",
+     "prompt": "string",
+     "schema": "object",
+     "sessionOptions": "object",
+     "waitFor": "number",
+     "status": "string",
+     "data": "object",
+     "error": "string"
+    },
+    "evidence": [
+     "openapi/_original/hyperbrowser-openapi.json#GET /api/extract/{id}",
+     "openapi/_original/hyperbrowser-openapi.json#POST /api/extract"
+    ]
+   },
+   "landingai": {
+    "segments": [
+     "jobs",
+     "parse",
+     "extract"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "markdown": "string",
+     "chunks": "array",
+     "splits": "array",
+     "grounding": "object",
+     "metadata": "object",
+     "extraction": "object",
+     "extraction_metadata": "object",
+     "job_id": "string",
+     "status": "string",
+     "received_at": "integer",
+     "created_at": "integer",
+     "progress": "number",
+     "failure_reason": null,
+     "org_id": null,
+     "version": null,
+     "data": null,
+     "output_url": null,
+     "structure": "object",
+     "completed_at": [
+      "string",
+      "null"
+     ],
+     "model_version": [
+      "string",
+      "null"
+     ],
+     "result": null,
+     "error": "object",
+     "schema_violation_error": null,
+     "warnings": "array",
+     "schema": "object",
+     "markdown_url": null,
+     "model": null,
+     "options": null,
+     "output_save_url": null,
+     "service_tier": null
+    },
+    "evidence": [
+     "openapi/_original/landingai-ade-v1-openapi-original.json#GET /v1/ade/extract/jobs",
+     "openapi/_original/landingai-ade-v1-openapi-original.json#GET /v1/ade/extract/jobs/{job_id}",
+     "openapi/_original/landingai-ade-v1-openapi-original.json#GET /v1/ade/parse/jobs",
+     "openapi/_original/landingai-ade-v1-openapi-original.json#GET /v1/ade/parse/jobs/{job_id}",
+     "openapi/_original/landingai-ade-v1-openapi-original.json#POST /v1/ade/extract",
+     "openapi/_original/landingai-ade-v1-openapi-original.json#POST /v1/ade/extract/jobs",
+     "openapi/_original/landingai-ade-v1-openapi-original.json#POST /v1/ade/parse",
+     "openapi/_original/landingai-ade-v1-openapi-original.json#POST /v1/ade/parse/jobs",
+     "openapi/_original/landingai-ade-v2-openapi-original.json#GET /v2/extract/jobs",
+     "openapi/_original/landingai-ade-v2-openapi-original.json#GET /v2/extract/jobs/{job_id}",
+     "openapi/_original/landingai-ade-v2-openapi-original.json#GET /v2/parse/jobs",
+     "openapi/_original/landingai-ade-v2-openapi-original.json#GET /v2/parse/jobs/{job_id}"
+    ]
+   },
+   "machinelibrary-ai": {
+    "segments": [
+     "recognitions"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "completed_at": [
+      "integer",
+      "null"
+     ],
+     "created_at": "integer",
+     "error_class": [
+      "string",
+      "null"
+     ],
+     "has_result": "boolean",
+     "id": "string",
+     "input_format": "string",
+     "languages": "array",
+     "report_url": [
+      "string",
+      "null"
+     ],
+     "result_url": [
+      "string",
+      "null"
+     ],
+     "started_at": [
+      "integer",
+      "null"
+     ],
+     "status": "string"
+    },
+    "evidence": [
+     "openapi/_original/machinelibrary-ai-openapi.json#GET /v1/recognitions/{id}",
+     "openapi/_original/machinelibrary-ai-openapi.json#POST /v1/recognitions"
+    ]
+   },
+   "mercury-hq-com": {
+    "segments": [
+     "extract"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "ok": "boolean",
+     "url": "string",
+     "status": "integer",
+     "extract": "object",
+     "schema": "object",
+     "coerced": "array",
+     "title": "string",
+     "text": "string",
+     "bytes": "integer",
+     "contentType": "string",
+     "truncated": "boolean",
+     "redirects": "array",
+     "fetchedAt": "string",
+     "metered": "boolean",
+     "delivered": "string",
+     "kind": "string",
+     "error": "string",
+     "attestation": "object"
+    },
+    "evidence": [
+     "openapi/_original/mercury-hq-com-x402-storefront-openapi.json#GET /buy/extract",
+     "openapi/_original/mercury-hq-com-x402-storefront-openapi.yml#GET /buy/extract"
+    ]
+   },
+   "mistral": {
+    "segments": [
+     "ocr"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "top_left_x": "integer",
+     "top_left_y": "integer",
+     "bottom_right_x": "integer",
+     "bottom_right_y": "integer",
+     "image_base64": "string",
+     "model": "string",
+     "document": "object",
+     "pages": "array",
+     "include_image_base64": "boolean",
+     "image_limit": "integer",
+     "image_min_size": "integer"
+    },
+    "evidence": [
+     "openapi/_original/mistral-ocr-openapi.yml#POST /ocr"
+    ]
+   },
+   "nace-ai": {
+    "segments": [
+     "parse",
+     "extract"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "job_id": "string",
+     "action": "string",
+     "status": "string",
+     "result": null,
+     "error": null,
+     "created_at": "string",
+     "started_at": null,
+     "completed_at": null,
+     "file": "object",
+     "idempotency_key": null,
+     "schema": "object",
+     "markdown_url": null
+    },
+    "evidence": [
+     "openapi/_original/nace-ai-ndi-openapi.json#POST /api/v1/extract",
+     "openapi/_original/nace-ai-ndi-openapi.json#POST /api/v1/parse"
+    ]
+   },
+   "nimbleway": {
+    "segments": [
+     "extract"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "url": "string",
+     "task_id": "string",
+     "status": "string",
+     "status_code": "integer",
+     "data": "object",
+     "metadata": "object",
+     "warnings": "array",
+     "country": "string",
+     "state": "string",
+     "city": "string",
+     "locale": "string",
+     "render": null,
+     "parse": "boolean",
+     "parser": "object",
+     "formats": "array",
+     "driver": "string",
+     "auto_driver_configuration": "object",
+     "network_capture": "array",
+     "browser_actions": "array",
+     "browser": null,
+     "os": "string",
+     "no_userbrowser": "boolean",
+     "device": "string",
+     "tag": "string",
+     "is_xhr": "boolean",
+     "http2": "boolean",
+     "expected_status_codes": "array",
+     "referrer_type": null,
+     "method": "string",
+     "render_options": "object",
+     "id": "string",
+     "output_url": "string",
+     "status_url": "string",
+     "download_url": "string",
+     "error": "string",
+     "error_type": "string",
+     "created_at": "string",
+     "modified_at": "string",
+     "account_name": "string",
+     "input": null,
+     "_query": null,
+     "batch_id": "string",
+     "api_type": "string"
+    },
+    "evidence": [
+     "openapi/_original/nimbleway-openapi.json#POST /v1/extract",
+     "openapi/_original/nimbleway-openapi.json#POST /v1/extract/batch"
+    ]
+   },
+   "nitro-software": {
+    "segments": [
+     "extractions"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/nitro-software-openapi-original.json#POST /extractions"
+    ]
+   },
+   "parseflow": {
+    "segments": [
+     "analyze"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/parseflow-openapi.json#POST /v2/analyze"
+    ]
+   },
+   "parsio": {
+    "segments": [
+     "parse"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "doc_id": "string",
+     "parsing_in_progress": "boolean",
+     "status": "string",
+     "name": "string",
+     "content_type": "string",
+     "created_at": "string",
+     "processed_at": "string",
+     "json": "object"
+    },
+    "evidence": [
+     "openapi/_original/parsio-openapi.yml#POST /docs/{document_id}/parse"
+    ]
+   },
+   "pdf-co": {
+    "segments": [
+     "extract"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "status": "string",
+     "message": "string",
+     "url": "string",
+     "jobId": "string",
+     "credits": "integer",
+     "remainingCredits": "integer",
+     "duration": "integer",
+     "inline": null,
+     "password": "string",
+     "expiration": "number",
+     "async": null,
+     "httpusername": "string",
+     "httppassword": "string",
+     "profiles": "string"
+    },
+    "evidence": [
+     "openapi/_original/pdf-co-openapi.yml#POST /v1/pdf/attachments/extract"
+    ]
+   },
+   "qomplement": {
+    "segments": [
+     "extract"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/qomplement-openapi-original.json#POST /v1/extract"
+    ]
+   },
+   "reducto": {
+    "segments": [
+     "parse",
+     "extract"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "response_type": "string",
+     "job_id": "string",
+     "duration": "number",
+     "pdf_url": "string",
+     "studio_link": "string",
+     "usage": "object",
+     "result": null,
+     "parse_mode": "string",
+     "input": null,
+     "enhance": "object",
+     "retrieval": "object",
+     "formatting": "object",
+     "spreadsheet": "object",
+     "settings": "object",
+     "parsing": "object",
+     "instructions": "object"
+    },
+    "evidence": [
+     "openapi/_original/reducto-document-api-openapi.yml#POST /extract",
+     "openapi/_original/reducto-document-api-openapi.yml#POST /parse"
+    ]
+   },
+   "reducto-ai": {
+    "segments": [
+     "extract",
+     "parse"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "input": null,
+     "parsing": "object",
+     "instructions": "object",
+     "settings": "object",
+     "response_type": "string",
+     "job_id": "string",
+     "duration": "number",
+     "pdf_url": null,
+     "studio_link": null,
+     "usage": "object",
+     "result": null,
+     "parse_mode": null,
+     "enhance": "object",
+     "retrieval": "object",
+     "formatting": "object",
+     "spreadsheet": "object"
+    },
+    "evidence": [
+     "openapi/_original/reducto-extract-api-openapi.yml#POST /extract",
+     "openapi/_original/reducto-parse-api-openapi.yml#POST /parse"
+    ]
+   },
+   "runautomat": {
+    "segments": [
+     "extract"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "data": "object"
+    },
+    "evidence": [
+     "openapi/_original/runautomat-extract-openapi.json#POST /api/extract"
+    ]
+   },
+   "s1-dev": {
+    "segments": [
+     "extract"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "success": "boolean",
+     "extractParameters": "object",
+     "results": null,
+     "url": "string",
+     "prompt": "string",
+     "response_format": "object"
+    },
+    "evidence": [
+     "openapi/_original/s1-dev-openapi.yml#POST /extract",
+     "openapi/_original/search1api-openapi.json#POST /extract"
+    ]
+   },
+   "schemaextract": {
+    "segments": [
+     "extract"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "ok": "boolean",
+     "data": "object",
+     "meta": "object",
+     "schema": "object",
+     "file_base64": "string",
+     "filename": "string",
+     "mime": "string",
+     "preset": "string",
+     "include_raw_text": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/schemaextract-openapi.json#POST /v1/extract",
+     "openapi/_original/schemaextract-openapi.yml#POST /v1/extract"
+    ]
+   },
+   "schemasure": {
+    "segments": [
+     "extract"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "data": null,
+     "meta": "object",
+     "input": "string",
+     "inputType": "string",
+     "schema": "object",
+     "options": "object"
+    },
+    "evidence": [
+     "openapi/_original/schemasure-openapi.json#POST /extract",
+     "openapi/_original/schemasure-openapi.json#POST /v2/extract"
+    ]
+   },
+   "sensible-io": {
+    "segments": [
+     "extract",
+     "extractions"
+    ],
+    "operations": [
+     "POST item",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "status": "string",
+     "parsed_document": "object",
+     "document_url": "string",
+     "environment": "string"
+    },
+    "evidence": [
+     "openapi/_original/sensible-io-openapi.yml#POST /extract/{document_type}",
+     "openapi/_original/sensible-io-openapi.yml#PUT /extractions/{id}"
+    ]
+   },
+   "sensible-so": {
+    "segments": [
+     "extract",
+     "extractions"
+    ],
+    "operations": [
+     "GET collection",
+     "POST item"
+    ],
+    "properties": {
+     "id": "string",
+     "created": "string",
+     "type": "string",
+     "status": "string",
+     "completed": "string",
+     "configuration": "string",
+     "configuration_version": "string",
+     "parsed_document": "object",
+     "validations": "array",
+     "file_metadata": "object",
+     "validation_summary": "object",
+     "errors": "array",
+     "classification_summary": "array",
+     "page_count": "integer",
+     "environment": "string",
+     "document_name": "string",
+     "content_type": "string",
+     "coverage": "number",
+     "reviewStatus": "string",
+     "charged": "integer",
+     "postprocessorOutput": "object",
+     "reviewStatuses": "string"
+    },
+    "evidence": [
+     "openapi/_original/sensible-extractions-api-openapi.yml#GET /extractions",
+     "openapi/_original/sensible-extractions-api-openapi.yml#POST /extract/{document_type}"
+    ]
+   },
+   "snapapi-pics": {
+    "segments": [
+     "extract",
+     "analyze"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "success": "boolean",
+     "type": "string",
+     "url": "string",
+     "data": null,
+     "responseTime": "integer",
+     "selector": "string",
+     "waitFor": "string",
+     "timeout": "integer",
+     "darkMode": "boolean",
+     "blockAds": "boolean",
+     "blockCookieBanners": "boolean",
+     "includeImages": "boolean",
+     "maxLength": "integer",
+     "cleanOutput": "boolean",
+     "metadata": "object",
+     "analysis": null,
+     "provider": "string",
+     "model": "string",
+     "prompt": "string",
+     "apiKey": "string",
+     "jsonSchema": "object",
+     "includeScreenshot": "boolean",
+     "includeMetadata": "boolean",
+     "maxContentLength": "integer"
+    },
+    "evidence": [
+     "openapi/_original/snapapi-pics-openapi.json#GET /v1/extract",
+     "openapi/_original/snapapi-pics-openapi.json#POST /v1/analyze",
+     "openapi/_original/snapapi-pics-openapi.json#POST /v1/extract"
+    ]
+   },
+   "social-fetch": {
+    "segments": [
+     "extract"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "lookupStatus": "string",
+     "proxy": "string",
+     "budgetExceeded": "boolean",
+     "bytesTransferred": "integer",
+     "url": "string",
+     "status": "integer",
+     "extracted": "array",
+     "metadata": "object",
+     "schema": "object",
+     "scanFullPage": "boolean",
+     "waitFor": "string",
+     "maxCredits": "integer"
+    },
+    "evidence": [
+     "openapi/_original/social-fetch-openapi.json#POST /v1/web/extract"
+    ]
+   },
+   "socialcrawl": {
+    "segments": [
+     "extract",
+     "parse"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "success": "boolean",
+     "platform": "string",
+     "endpoint": "string",
+     "data": "object",
+     "credits_used": "integer",
+     "credits_remaining": [
+      "integer",
+      "null"
+     ],
+     "request_id": "string",
+     "cached": "boolean",
+     "idempotent_replay": "boolean",
+     "file": "string",
+     "filename": "string",
+     "mime_type": "string",
+     "url": "string"
+    },
+    "evidence": [
+     "openapi/_original/socialcrawl-openapi-slim.json#GET /tavily/extract",
+     "openapi/_original/socialcrawl-openapi-slim.json#GET /web/extract",
+     "openapi/_original/socialcrawl-openapi-slim.json#POST /web/parse"
+    ]
+   },
+   "tensorlake": {
+    "segments": [
+     "parse",
+     "extract"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "parse_id": "string",
+     "status": "string",
+     "created_at": "string",
+     "markdown": "string",
+     "chunks": "array",
+     "pages": "array",
+     "structured_data": "object",
+     "file_id": "string",
+     "file_url": "string",
+     "raw_text": "string",
+     "page_range": "string",
+     "parsing_options": "object",
+     "structured_extraction_options": "array",
+     "labels": "object",
+     "id": "string",
+     "deleted": "boolean",
+     "json_schema": "object"
+    },
+    "evidence": [
+     "openapi/_original/tensorlake-openapi.yml#DELETE /documents/v2/parse/{parse_id}",
+     "openapi/_original/tensorlake-openapi.yml#GET /documents/v2/parse",
+     "openapi/_original/tensorlake-openapi.yml#GET /documents/v2/parse/{parse_id}",
+     "openapi/_original/tensorlake-openapi.yml#POST /documents/v2/extract",
+     "openapi/_original/tensorlake-openapi.yml#POST /documents/v2/parse"
+    ]
+   },
+   "xquik-api": {
+    "segments": [
+     "extractions"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "toolType": "string",
+     "status": "string",
+     "totalResults": "integer",
+     "createdAt": "string",
+     "completedAt": "string",
+     "allowed": "boolean",
+     "creditsAvailable": "string",
+     "creditsRequired": "string",
+     "estimatedResults": "integer",
+     "resolvedXUserId": "string",
+     "source": "string",
+     "targetTweetId": "string",
+     "targetUsername": "string",
+     "targetCommunityId": "string",
+     "targetListId": "string",
+     "targetSpaceId": "string",
+     "targetTweetIds": "array",
+     "targetUsernames": "array",
+     "targetCommunityIds": "array",
+     "targetListIds": "array",
+     "searchQueries": "array",
+     "targets": "array",
+     "relationTargets": "array",
+     "queryType": "string",
+     "maxItemsPerTarget": "integer",
+     "maxPagesPerTarget": "integer",
+     "startCursor": "string",
+     "dedupeAcrossTargets": "boolean",
+     "dedupeMode": "string",
+     "overlapMode": "boolean",
+     "includeSearchTerms": "boolean",
+     "includeTargetMetadata": "boolean",
+     "collectionStrategy": "string",
+     "scope": "string",
+     "maxDepth": "integer",
+     "sort": "string",
+     "excludeOriginalAuthor": "boolean",
+     "includeOriginalPost": "boolean",
+     "hasMediaOnly": "boolean",
+     "sinceTime": null,
+     "untilTime": null,
+     "minViews": "integer",
+     "minBookmarks": "integer",
+     "maxLikes": "integer",
+     "maxRetweets": "integer",
+     "maxReplies": "integer",
+     "maxQuotes": "integer",
+     "blueVerifiedOnly": "boolean",
+     "cardName": "string",
+     "excludeSource": "string",
+     "geocode": "string",
+     "sinceId": "string",
+     "maxId": "string",
+     "near": "string",
+     "within": "string",
+     "withinTime": "string",
+     "nativeRetweets": "boolean",
+     "safe": "boolean",
+     "news": "boolean",
+     "minFollowers": "integer",
+     "maxFollowers": "integer",
+     "minFollowing": "integer",
+     "maxFollowing": "integer",
+     "minPosts": "integer",
+     "maxPosts": "integer",
+     "minAccountAgeDays": "integer",
+     "verifiedType": "string",
+     "hasWebsite": "boolean",
+     "hasLocation": "boolean",
+     "bioContains": "string",
+     "locationContains": "string",
+     "usernameContains": "string",
+     "resultsLimit": "integer",
+     "searchQuery": "string",
+     "fromUser": "string",
+     "toUser": "string",
+     "mentioning": "string",
+     "language": "string",
+     "sinceDate": "string",
+     "untilDate": "string",
+     "mediaType": "string",
+     "minFaves": "integer",
+     "minRetweets": "integer",
+     "minReplies": "integer",
+     "minQuotes": "integer",
+     "verifiedOnly": "boolean",
+     "replies": "string",
+     "retweets": "string",
+     "quotes": "string",
+     "exactPhrase": "string",
+     "excludeWords": "string",
+     "anyWords": "string",
+     "hashtags": "string",
+     "cashtags": "string",
+     "url": "string",
+     "conversationId": "string",
+     "inReplyToTweetId": "string",
+     "quotesOfTweetId": "string",
+     "retweetsOfTweetId": "string",
+     "listId": "string",
+     "place": "string",
+     "placeCountry": "string",
+     "pointRadius": "string",
+     "boundingBox": "string",
+     "advancedQuery": "string",
+     "job": "object",
+     "results": "array",
+     "hasMore": "boolean",
+     "nextCursor": "string"
+    },
+    "evidence": [
+     "openapi/_original/xquik-rest-api-openapi.json#GET /api/v1/extractions",
+     "openapi/_original/xquik-rest-api-openapi.json#GET /api/v1/extractions/{id}",
+     "openapi/_original/xquik-rest-api-openapi.json#POST /api/v1/extractions",
+     "openapi/_original/xquik-rest-api-openapi.yml#GET /api/v1/extractions",
+     "openapi/_original/xquik-rest-api-openapi.yml#GET /api/v1/extractions/{id}",
+     "openapi/_original/xquik-rest-api-openapi.yml#POST /api/v1/extractions"
+    ]
+   },
+   "zuva": {
+    "segments": [
+     "extraction",
+     "ocr",
+     "extractions"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "file_ids": "array",
+     "field_ids": "array",
+     "options": "object",
+     "request_id": "string",
+     "file_id": "string",
+     "status": "string",
+     "page_count": "integer",
+     "character_count": "integer",
+     "scan_quality": "string",
+     "scan_score": "number"
+    },
+    "evidence": [
+     "openapi/_original/zuva-openapi.yml#GET /extraction/{request_id}",
+     "openapi/_original/zuva-openapi.yml#GET /extractions",
+     "openapi/_original/zuva-openapi.yml#GET /ocr/{request_id}",
+     "openapi/_original/zuva-openapi.yml#POST /extraction",
+     "openapi/_original/zuva-openapi.yml#POST /ocr"
+    ]
+   },
+   "zyte": {
+    "segments": [
+     "extract"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "url": "string",
+     "statusCode": "integer",
+     "httpResponseBody": "string",
+     "httpResponseHeaders": "array",
+     "browserHtml": "string",
+     "session": "object",
+     "screenshot": "string",
+     "article": null,
+     "articleList": null,
+     "articleNavigation": null,
+     "forumThread": null,
+     "jobPosting": null,
+     "jobPostingNavigation": null,
+     "pageContent": null,
+     "product": null,
+     "productList": null,
+     "productNavigation": null,
+     "customAttributes": "object",
+     "echoData": "object",
+     "jobId": "string",
+     "actions": "array",
+     "responseCookies": "array",
+     "networkCapture": "array",
+     "serp": "object",
+     "requestHeaders": "object",
+     "tags": "object",
+     "ipType": "string",
+     "httpRequestMethod": "string",
+     "httpRequestBody": "string",
+     "httpRequestText": "string",
+     "customHttpRequestHeaders": "array",
+     "screenshotOptions": "object",
+     "extractFrom": "string",
+     "articleOptions": "object",
+     "articleListOptions": "object",
+     "articleNavigationOptions": "object",
+     "forumThreadOptions": "object",
+     "jobPostingOptions": "object",
+     "jobPostingNavigationOptions": "object",
+     "pageContentOptions": "object",
+     "productOptions": "object",
+     "productListOptions": "object",
+     "productNavigationOptions": "object",
+     "customAttributesOptions": "object",
+     "geolocation": "string",
+     "javascript": "boolean",
+     "viewport": "object",
+     "followRedirect": "boolean",
+     "verifyCertificate": "boolean",
+     "sessionContext": "array",
+     "sessionContextParameters": "object",
+     "device": "string",
+     "cookieManagement": null,
+     "requestCookies": "array",
+     "serpOptions": "object",
+     "includeIframes": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/zyte-zyte-api-openapi.yaml#POST /extract"
+    ]
+   }
+  },
+  "extractor": {
+   "affinda": {
+    "segments": [
+     "extractors",
+     "document_types"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "identifier": "string",
+     "name": "string",
+     "namePlural": "string",
+     "baseExtractor": "object",
+     "organization": "object",
+     "category": "string",
+     "validatable": "boolean",
+     "isCustom": "boolean",
+     "fieldGroups": "array",
+     "createdDt": "string",
+     "lastTrainedDt": "string",
+     "label": "string",
+     "slug": "string",
+     "fieldType": "string",
+     "dataSource": "string",
+     "mapping": "string",
+     "dataPoint": "string",
+     "mandatory": "boolean",
+     "disabled": "boolean",
+     "autoValidationThreshold": "number",
+     "showDropdown": "boolean",
+     "displayRawText": "boolean",
+     "dropNull": "boolean",
+     "displayEnumValue": "boolean",
+     "fields": "array",
+     "description": "string",
+     "ingest_email": "string"
+    },
+    "evidence": [
+     "openapi/_original/affinda-extractors-api-openapi.yml#DELETE /v3/extractors/{identifier}",
+     "openapi/_original/affinda-extractors-api-openapi.yml#GET /v3/extractors",
+     "openapi/_original/affinda-extractors-api-openapi.yml#GET /v3/extractors/{identifier}",
+     "openapi/_original/affinda-extractors-api-openapi.yml#PATCH /v3/extractors/{identifier}",
+     "openapi/_original/affinda-extractors-api-openapi.yml#POST /v3/extractors",
+     "openapi/_original/affinda-v3-openapi.yml#DELETE /v3/document_types/{identifier}",
+     "openapi/_original/affinda-v3-openapi.yml#DELETE /v3/extractors/{identifier}",
+     "openapi/_original/affinda-v3-openapi.yml#GET /v3/document_types",
+     "openapi/_original/affinda-v3-openapi.yml#GET /v3/document_types/{identifier}",
+     "openapi/_original/affinda-v3-openapi.yml#GET /v3/extractors",
+     "openapi/_original/affinda-v3-openapi.yml#GET /v3/extractors/{identifier}",
+     "openapi/_original/affinda-v3-openapi.yml#PATCH /v3/document_types/{identifier}"
+    ]
+   },
+   "docparser": {
+    "segments": [
+     "parsers"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "label": "string"
+    },
+    "evidence": [
+     "openapi/_original/docparser-rest-api-openapi.yml#GET /parsers"
+    ]
+   },
+   "extend-ai": {
+    "segments": [
+     "extractors",
+     "processors"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "object": "string",
+     "id": "string",
+     "name": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "draftVersion": "object",
+     "cloneExtractorId": "string",
+     "config": "object",
+     "generate": "object",
+     "type": "string",
+     "versions": "array",
+     "success": "boolean",
+     "processor": "object",
+     "cloneProcessorId": "string"
+    },
+    "evidence": [
+     "openapi/_original/extend-ai-openapi.yml#GET /extractors",
+     "openapi/_original/extend-ai-openapi.yml#GET /extractors/{id}",
+     "openapi/_original/extend-ai-openapi.yml#GET /processors",
+     "openapi/_original/extend-ai-openapi.yml#POST /extractors",
+     "openapi/_original/extend-ai-openapi.yml#POST /extractors/{id}",
+     "openapi/_original/extend-ai-openapi.yml#POST /processors",
+     "openapi/_original/extend-ai-openapi.yml#POST /processors/{id}"
+    ]
+   },
+   "google-cloud-document-ai": {
+    "segments": [
+     "processors"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "type": "string",
+     "displayName": "string",
+     "state": "string",
+     "defaultProcessorVersion": "string",
+     "createTime": "string"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#GET /projects/{projectId}/locations/{location}/processors",
+     "openapi/_original/openapi.yml#POST /projects/{projectId}/locations/{location}/processors"
+    ]
+   },
+   "import-io": {
+    "segments": [
+     "extractor"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "nextRunAt": "integer",
+     "ownerId": "string",
+     "startTimestamp": "integer",
+     "interval": "string",
+     "extractorId": "string",
+     "intervalData": "object"
+    },
+    "evidence": [
+     "openapi/_original/import-io-openapi.json#DELETE /extractor/{extractorId}/",
+     "openapi/_original/import-io-openapi.json#GET /extractor",
+     "openapi/_original/import-io-openapi.json#GET /extractor/{extractorId}/",
+     "openapi/_original/import-io-openapi.json#POST /extractor"
+    ]
+   },
+   "parseur": {
+    "segments": [
+     "parser"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "account_uuid": "string",
+     "ai_engine": "string",
+     "attachments_only": "boolean",
+     "attachments_only_override": [
+      "boolean",
+      "null"
+     ],
+     "can_transform": "boolean",
+     "disable_deskew": "boolean",
+     "enable_layouted_text": "boolean",
+     "enable_image_ocr": "boolean",
+     "document_count": "integer",
+     "document_per_status_count": "object",
+     "email_prefix": "string",
+     "even_pages": "boolean",
+     "force_ocr": "boolean",
+     "id": "integer",
+     "is_master": "boolean",
+     "last_activity": "string",
+     "name": "string",
+     "odd_pages": "boolean",
+     "page_range_set": "array",
+     "parser_object_count": "integer",
+     "parser_object_set_last_modified": [
+      "string",
+      "null"
+     ],
+     "process_attachments": "boolean",
+     "retention_policy": "integer",
+     "split_keywords": [
+      "array",
+      "null"
+     ],
+     "split_page": [
+      "integer",
+      "null"
+     ],
+     "split_page_range_set": "array",
+     "template_count": "integer",
+     "webhook_count": "integer",
+     "attachments_field": "boolean",
+     "original_document_field": "boolean",
+     "searchable_pdf_field": "boolean",
+     "headers_field": "boolean",
+     "received_field": "boolean",
+     "received_date_field": "boolean",
+     "received_time_field": "boolean",
+     "processed_field": "boolean",
+     "processed_date_field": "boolean",
+     "processed_time_field": "boolean",
+     "sender_field": "boolean",
+     "sender_name_field": "boolean",
+     "split_page_range_field": "boolean",
+     "recipient_field": "boolean",
+     "to_field": "boolean",
+     "cc_field": "boolean",
+     "bcc_field": "boolean",
+     "reply_to_field": "boolean",
+     "recipient_suffix_field": "boolean",
+     "original_recipient_field": "boolean",
+     "subject_field": "boolean",
+     "template_field": "boolean",
+     "html_document_field": "boolean",
+     "text_document_field": "boolean",
+     "content_field": "boolean",
+     "last_reply_field": "boolean",
+     "document_id_field": "boolean",
+     "parent_id_field": "boolean",
+     "document_url_field": "boolean",
+     "public_document_url_field": "boolean",
+     "page_count_field": "boolean",
+     "credit_count_field": "boolean",
+     "mailbox_id_field": "boolean",
+     "parsing_engine_field": "boolean",
+     "available_webhook_set": "array",
+     "webhook_set": "array",
+     "table_set": "array",
+     "ai_instructions": [
+      "string",
+      "null"
+     ],
+     "allowed_extensions": "array",
+     "master_parser_name": "string",
+     "master_parser_slug": [
+      "string",
+      "null"
+     ],
+     "csv_download": "string",
+     "decimal_separator": null,
+     "default_timezone": [
+      "string",
+      "null"
+     ],
+     "disable_document_links": "boolean",
+     "expand_result": "boolean",
+     "extract_xml_from_comment": "boolean",
+     "input_date_format": null,
+     "identification_status": [
+      "string",
+      "null"
+     ],
+     "is_transform_enabled": "boolean",
+     "json_download": "string",
+     "parser_object_set": "array",
+     "pdf_conversion_format": "string",
+     "secret": "string",
+     "transform": [
+      "string",
+      "null"
+     ],
+     "use_whitelist_instead_of_blacklist": "boolean",
+     "template_set_last_modified": [
+      "string",
+      "null"
+     ],
+     "xls_download": "string",
+     "emails_or_domains": "array",
+     "notification_set": "object"
+    },
+    "evidence": [
+     "openapi/_original/parseur-openapi.yml#DELETE /parser/{id}",
+     "openapi/_original/parseur-openapi.yml#GET /parser",
+     "openapi/_original/parseur-openapi.yml#GET /parser/{id}",
+     "openapi/_original/parseur-openapi.yml#POST /parser",
+     "openapi/_original/parseur-openapi.yml#PUT /parser/{id}"
+    ]
+   },
+   "sensible-io": {
+    "segments": [
+     "document_types"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "name": "string"
+    },
+    "evidence": [
+     "openapi/_original/sensible-io-openapi.yml#DELETE /document_types/{id}",
+     "openapi/_original/sensible-io-openapi.yml#GET /document_types",
+     "openapi/_original/sensible-io-openapi.yml#GET /document_types/{id}",
+     "openapi/_original/sensible-io-openapi.yml#POST /document_types",
+     "openapi/_original/sensible-io-openapi.yml#PUT /document_types/{id}"
+    ]
+   },
+   "sensible-so": {
+    "segments": [
+     "document_types"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "id": "string",
+     "created": "string",
+     "schema": "object"
+    },
+    "evidence": [
+     "openapi/_original/sensible-document-types-api-openapi.yml#DELETE /document_types/{type-id}",
+     "openapi/_original/sensible-document-types-api-openapi.yml#GET /document_types",
+     "openapi/_original/sensible-document-types-api-openapi.yml#GET /document_types/{type-id}",
+     "openapi/_original/sensible-document-types-api-openapi.yml#POST /document_types"
+    ]
+   },
+   "uipath": {
+    "segments": [
+     "extractors"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "documentType": "string",
+     "extractorType": "string"
+    },
+    "evidence": [
+     "openapi/_original/uipath-document-understanding-openapi.yml#GET /projects/{projectId}/extractors"
+    ]
+   }
+  }
+ },
+ "naming": {
+  "path_segment": {
+   "lower": [
+    "73-strings",
+    "abbyy",
+    "adobe",
+    "advance-intelligence-group",
+    "affinda",
+    "agentql",
+    "airslate",
+    "amazon-scraper-api",
+    "anvil",
+    "apache-poi",
+    "apifreaks-api-hub-for-developers",
+    "automat",
+    "azure-document-intelligence",
+    "bem",
+    "bluebeam",
+    "bright-data",
+    "brightdata",
+    "canoe-intelligence",
+    "carbone",
+    "carsxe",
+    "chocodata",
+    "chroniclingamerica",
+    "chunkr-ai",
+    "claix-dev",
+    "cloro-dev",
+    "convertapi",
+    "conxai",
+    "crawl4ai",
+    "diffbot",
+    "docling",
+    "docparser",
+    "docraptor",
+    "docspring",
+    "docsumo",
+    "doctly-ai",
+    "docupanda",
+    "docuseal",
+    "done",
+    "eden-ai",
+    "eigenpal",
+    "evisort",
+    "extend-ai",
+    "firecrawl",
+    "formfeed",
+    "getemboss-ai",
+    "gonitro",
+    "google-cloud-document-ai",
+    "google-cloud-vision",
+    "hyperbrowser",
+    "hyperscience",
+    "import-io",
+    "inkit",
+    "instabase",
+    "interfaze",
+    "jurisign",
+    "konbiniapi",
+    "landingai",
+    "llmwhisperer",
+    "luminary",
+    "machinelibrary-ai",
+    "mathpix",
+    "mercury-hq-com",
+    "mistral",
+    "moondream",
+    "mrscraper",
+    "nace-ai",
+    "nanonets",
+    "nimbleway",
+    "nitro-software",
+    "ocrolus",
+    "openenvoy",
+    "oxylabs",
+    "packagex",
+    "parseflow",
+    "parseforme",
+    "parsehub",
+    "parseur",
+    "parsio",
+    "pdf-co",
+    "pdf-monkey",
+    "pdfendpoint",
+    "pdffiller",
+    "pdfgeneratorapi",
+    "pdfshift",
+    "pixepi",
+    "qomplement",
+    "quietforge",
+    "reducto",
+    "reducto-ai",
+    "rossum",
+    "runautomat",
+    "s1-dev",
+    "sahifa",
+    "schemaextract",
+    "schemasure",
+    "scraper-api",
+    "scrapfly",
+    "scrapingant",
+    "scrapingbee",
+    "sensible-io",
+    "sensible-so",
+    "serpwow",
+    "signwell",
+    "snapapi-pics",
+    "soax",
+    "social-fetch",
+    "socialcrawl",
+    "sorsa",
+    "spider-cloud",
+    "structify",
+    "superai",
+    "tensorlake",
+    "thordata",
+    "tinyfish",
+    "uipath",
+    "unstructured",
+    "urlbox",
+    "v7-labs",
+    "vectorizer-ai",
+    "veryfi",
+    "warppay402-com",
+    "webcrawlerapi-com",
+    "webscraping-ai",
+    "workist",
+    "xceptor",
+    "xquik-api",
+    "zenscrape",
+    "zuva",
+    "zyte"
+   ],
+   "kebab-case": [
+    "73-strings",
+    "abbyy",
+    "adobe",
+    "advance-intelligence-group",
+    "agentql",
+    "airslate",
+    "anvil",
+    "apifreaks-api-hub-for-developers",
+    "bem",
+    "bright-data",
+    "canoe-intelligence",
+    "carsxe",
+    "chunkr-ai",
+    "claix-dev",
+    "convertapi",
+    "conxai",
+    "docsumo",
+    "docupanda",
+    "done",
+    "eden-ai",
+    "eigenpal",
+    "firecrawl",
+    "formfeed",
+    "getemboss-ai",
+    "gonitro",
+    "hyperbrowser",
+    "instabase",
+    "jurisign",
+    "landingai",
+    "llmwhisperer",
+    "luminary",
+    "machinelibrary-ai",
+    "mathpix",
+    "mrscraper",
+    "nimbleway",
+    "nitro-software",
+    "ocrolus",
+    "oxylabs",
+    "parseflow",
+    "parseforme",
+    "parsio",
+    "pdf-co",
+    "pixepi",
+    "quietforge",
+    "schemasure",
+    "sejda",
+    "snapapi-pics",
+    "soax",
+    "social-fetch",
+    "socialcrawl",
+    "sorsa",
+    "spider-cloud",
+    "structify",
+    "superai",
+    "thordata",
+    "tinyfish",
+    "uipath",
+    "unstructured",
+    "veryfi",
+    "warppay402-com",
+    "webscraping-ai",
+    "workist",
+    "xquik-api"
+   ],
+   "snake_case": [
+    "affinda",
+    "airslate",
+    "bright-data",
+    "brightdata",
+    "canoe-intelligence",
+    "conxai",
+    "docraptor",
+    "docspring",
+    "eden-ai",
+    "extend-ai",
+    "hyperscience",
+    "mistral",
+    "nace-ai",
+    "ocrolus",
+    "openenvoy",
+    "parsehub",
+    "parseur",
+    "parsio",
+    "pdf-monkey",
+    "pdffiller",
+    "reducto",
+    "reducto-ai",
+    "sensible-io",
+    "sensible-so",
+    "serpwow",
+    "signwell",
+    "socialcrawl",
+    "spider-cloud",
+    "structify",
+    "superai",
+    "v7-labs",
+    "warppay402-com",
+    "workist"
+   ],
+   "other": [
+    "adobe",
+    "airslate",
+    "amazon-textract",
+    "anvil",
+    "azure-document-intelligence",
+    "canoe-intelligence",
+    "chroniclingamerica",
+    "conxai",
+    "getemboss-ai",
+    "gonitro",
+    "google-cloud-document-ai",
+    "google-cloud-vision",
+    "mathpix",
+    "nitro-software",
+    "pdfshift",
+    "pixepi",
+    "uipath"
+   ],
+   "camelCase": [
+    "73-strings",
+    "abbyy",
+    "adobe",
+    "azure-document-intelligence",
+    "conxai",
+    "google-cloud-document-ai",
+    "google-cloud-vision",
+    "parsio"
+   ],
+   "PascalCase": [
+    "canoe-intelligence",
+    "nanonets",
+    "uipath"
+   ]
+  },
+  "query_param": {
+   "lower": [
+    "abbyy",
+    "adobe",
+    "affinda",
+    "agentql",
+    "airslate",
+    "amazon-scraper-api",
+    "apache-poi",
+    "apifreaks-api-hub-for-developers",
+    "azure-document-intelligence",
+    "bem",
+    "bluebeam",
+    "bright-data",
+    "brightdata",
+    "canoe-intelligence",
+    "carbone",
+    "carsxe",
+    "chocodata",
+    "chroniclingamerica",
+    "chunkr-ai",
+    "cloro-dev",
+    "convertapi",
+    "conxai",
+    "diffbot",
+    "docparser",
+    "docspring",
+    "docsumo",
+    "doctly-ai",
+    "docupanda",
+    "docuseal",
+    "eden-ai",
+    "eigenpal",
+    "evisort",
+    "extend-ai",
+    "firecrawl",
+    "formfeed",
+    "getemboss-ai",
+    "hyperbrowser",
+    "hyperscience",
+    "inkit",
+    "instabase",
+    "jurisign",
+    "konbiniapi",
+    "landingai",
+    "llmwhisperer",
+    "luminary",
+    "machinelibrary-ai",
+    "mathpix",
+    "mercury-hq-com",
+    "mistral",
+    "mrscraper",
+    "nace-ai",
+    "nimbleway",
+    "ocrolus",
+    "oxylabs",
+    "packagex",
+    "parseflow",
+    "parsehub",
+    "parseur",
+    "parsio",
+    "pdf-co",
+    "pdf-monkey",
+    "pdffiller",
+    "pdfgeneratorapi",
+    "pdfshift",
+    "qomplement",
+    "quietforge",
+    "reducto",
+    "reducto-ai",
+    "rossum",
+    "s1-dev",
+    "sahifa",
+    "schemaextract",
+    "scraper-api",
+    "scrapfly",
+    "scrapingant",
+    "scrapingbee",
+    "sensible-so",
+    "serpwow",
+    "signwell",
+    "snapapi-pics",
+    "soax",
+    "social-fetch",
+    "socialcrawl",
+    "sorsa",
+    "spider-cloud",
+    "structify",
+    "superai",
+    "tensorlake",
+    "thordata",
+    "tinyfish",
+    "uipath",
+    "unstructured",
+    "urlbox",
+    "veryfi",
+    "webcrawlerapi-com",
+    "webscraping-ai",
+    "workist",
+    "xceptor",
+    "xquik-api",
+    "zenrows",
+    "zenscrape",
+    "zyte"
+   ],
+   "snake_case": [
+    "adobe",
+    "affinda",
+    "agentql",
+    "airslate",
+    "amazon-scraper-api",
+    "apifreaks-api-hub-for-developers",
+    "bright-data",
+    "brightdata",
+    "canoe-intelligence",
+    "carsxe",
+    "chocodata",
+    "chroniclingamerica",
+    "chunkr-ai",
+    "claix-dev",
+    "docparser",
+    "docspring",
+    "docsumo",
+    "doctly-ai",
+    "docupanda",
+    "docuseal",
+    "eden-ai",
+    "eigenpal",
+    "formfeed",
+    "getemboss-ai",
+    "inkit",
+    "instabase",
+    "jurisign",
+    "landingai",
+    "llmwhisperer",
+    "luminary",
+    "machinelibrary-ai",
+    "mathpix",
+    "mistral",
+    "nace-ai",
+    "nanonets",
+    "nimbleway",
+    "ocrolus",
+    "parsehub",
+    "parseur",
+    "parsio",
+    "pdffiller",
+    "quietforge",
+    "reducto",
+    "reducto-ai",
+    "rossum",
+    "sahifa",
+    "schemaextract",
+    "scraper-api",
+    "scrapfly",
+    "scrapingant",
+    "scrapingbee",
+    "sensible-so",
+    "serpwow",
+    "signwell",
+    "snapapi-pics",
+    "socialcrawl",
+    "sorsa",
+    "structify",
+    "superai",
+    "thordata",
+    "tinyfish",
+    "unstructured",
+    "veryfi",
+    "webcrawlerapi-com",
+    "webscraping-ai",
+    "workist",
+    "xceptor",
+    "xquik-api",
+    "zenrows",
+    "zenscrape",
+    "zuva",
+    "zyte"
+   ],
+   "camelCase": [
+    "73-strings",
+    "abbyy",
+    "adobe",
+    "airslate",
+    "anvil",
+    "apifreaks-api-hub-for-developers",
+    "azure-document-intelligence",
+    "bem",
+    "bluebeam",
+    "canoe-intelligence",
+    "carsxe",
+    "chroniclingamerica",
+    "convertapi",
+    "conxai",
+    "diffbot",
+    "eigenpal",
+    "evisort",
+    "extend-ai",
+    "firecrawl",
+    "gonitro",
+    "hyperbrowser",
+    "landingai",
+    "mercury-hq-com",
+    "mrscraper",
+    "nitro-software",
+    "snapapi-pics",
+    "social-fetch",
+    "socialcrawl",
+    "uipath",
+    "xquik-api"
+   ],
+   "other": [
+    "airslate",
+    "apifreaks-api-hub-for-developers",
+    "pdf-monkey",
+    "signwell",
+    "uipath",
+    "v7-labs",
+    "veryfi"
+   ],
+   "kebab-case": [
+    "airslate",
+    "apifreaks-api-hub-for-developers",
+    "azure-document-intelligence",
+    "instabase",
+    "scrapingant",
+    "uipath"
+   ],
+   "PascalCase": [
+    "abbyy"
+   ]
+  },
+  "pagination_param": {
+   "limit": [
+    "abbyy",
+    "adobe",
+    "affinda",
+    "agentql",
+    "airslate",
+    "apifreaks-api-hub-for-developers",
+    "bem",
+    "bluebeam",
+    "canoe-intelligence",
+    "chunkr-ai",
+    "conxai",
+    "docparser",
+    "docspring",
+    "docsumo",
+    "doctly-ai",
+    "docupanda",
+    "docuseal",
+    "eden-ai",
+    "eigenpal",
+    "firecrawl",
+    "formfeed",
+    "getemboss-ai",
+    "hyperbrowser",
+    "hyperscience",
+    "instabase",
+    "luminary",
+    "machinelibrary-ai",
+    "mercury-hq-com",
+    "nace-ai",
+    "nimbleway",
+    "ocrolus",
+    "packagex",
+    "parseflow",
+    "parsehub",
+    "pdfshift",
+    "qomplement",
+    "quietforge",
+    "reducto",
+    "reducto-ai",
+    "sensible-so",
+    "signwell",
+    "snapapi-pics",
+    "social-fetch",
+    "socialcrawl",
+    "structify",
+    "superai",
+    "tensorlake",
+    "tinyfish",
+    "unstructured",
+    "webcrawlerapi-com",
+    "xquik-api"
+   ],
+   "page": [
+    "agentql",
+    "airslate",
+    "amazon-scraper-api",
+    "apifreaks-api-hub-for-developers",
+    "bem",
+    "canoe-intelligence",
+    "chocodata",
+    "chroniclingamerica",
+    "docspring",
+    "eden-ai",
+    "evisort",
+    "getemboss-ai",
+    "hyperbrowser",
+    "inkit",
+    "jurisign",
+    "landingai",
+    "mistral",
+    "mrscraper",
+    "nimbleway",
+    "packagex",
+    "parseur",
+    "parsio",
+    "pdf-monkey",
+    "pdffiller",
+    "rossum",
+    "scrapingbee",
+    "serpwow",
+    "signwell",
+    "social-fetch",
+    "socialcrawl",
+    "superai",
+    "tinyfish",
+    "uipath",
+    "unstructured",
+    "veryfi",
+    "webcrawlerapi-com",
+    "workist",
+    "xceptor",
+    "zyte"
+   ],
+   "offset": [
+    "abbyy",
+    "affinda",
+    "airslate",
+    "bluebeam",
+    "conxai",
+    "docsumo",
+    "docupanda",
+    "eden-ai",
+    "eigenpal",
+    "getemboss-ai",
+    "hyperscience",
+    "instabase",
+    "nimbleway",
+    "ocrolus",
+    "parseflow",
+    "parsehub",
+    "qomplement",
+    "quietforge",
+    "snapapi-pics",
+    "social-fetch",
+    "socialcrawl",
+    "structify",
+    "superai",
+    "webcrawlerapi-com"
+   ],
+   "page_size": [
+    "73-strings",
+    "evisort",
+    "getemboss-ai",
+    "inkit",
+    "instabase",
+    "landingai",
+    "mistral",
+    "mrscraper",
+    "parseur",
+    "rossum",
+    "superai",
+    "uipath",
+    "unstructured",
+    "v7-labs",
+    "veryfi",
+    "webcrawlerapi-com",
+    "workist",
+    "xceptor",
+    "xquik-api",
+    "zyte"
+   ],
+   "cursor": [
+    "bem",
+    "chunkr-ai",
+    "docspring",
+    "eigenpal",
+    "firecrawl",
+    "formfeed",
+    "konbiniapi",
+    "nace-ai",
+    "nimbleway",
+    "pdfshift",
+    "reducto",
+    "reducto-ai",
+    "social-fetch",
+    "socialcrawl",
+    "tensorlake",
+    "tinyfish",
+    "unstructured",
+    "xquik-api"
+   ],
+   "start": [
+    "adobe",
+    "affinda",
+    "chunkr-ai",
+    "conxai",
+    "hyperbrowser",
+    "social-fetch",
+    "socialcrawl",
+    "structify"
+   ],
+   "per_page": [
+    "airslate",
+    "canoe-intelligence",
+    "docspring",
+    "jurisign",
+    "nimbleway",
+    "parsio",
+    "pdffiller",
+    "socialcrawl"
+   ],
+   "count": [
+    "affinda",
+    "airslate",
+    "apifreaks-api-hub-for-developers",
+    "konbiniapi",
+    "social-fetch",
+    "socialcrawl",
+    "xquik-api"
+   ],
+   "after": [
+    "apifreaks-api-hub-for-developers",
+    "docuseal",
+    "luminary",
+    "social-fetch",
+    "socialcrawl",
+    "xquik-api"
+   ],
+   "before": [
+    "apifreaks-api-hub-for-developers",
+    "docuseal",
+    "luminary",
+    "pdfshift",
+    "social-fetch"
+   ],
+   "size": [
+    "apifreaks-api-hub-for-developers",
+    "carsxe",
+    "diffbot"
+   ],
+   "top": [
+    "getemboss-ai",
+    "social-fetch",
+    "uipath"
+   ],
+   "skip": [
+    "doctly-ai",
+    "uipath"
+   ],
+   "starting_after": [
+    "bem"
+   ],
+   "max_results": [
+    "socialcrawl"
+   ]
+  },
+  "path_param": {
+   "lower": [
+    "adobe",
+    "affinda",
+    "airslate",
+    "bem",
+    "bright-data",
+    "canoe-intelligence",
+    "chocodata",
+    "chroniclingamerica",
+    "conxai",
+    "diffbot",
+    "doctly-ai",
+    "docuseal",
+    "eden-ai",
+    "eigenpal",
+    "extend-ai",
+    "firecrawl",
+    "formfeed",
+    "getemboss-ai",
+    "google-cloud-document-ai",
+    "google-cloud-vision",
+    "hyperbrowser",
+    "inkit",
+    "instabase",
+    "jurisign",
+    "konbiniapi",
+    "luminary",
+    "machinelibrary-ai",
+    "mrscraper",
+    "nimbleway",
+    "ocrolus",
+    "packagex",
+    "parseforme",
+    "parseur",
+    "pdf-co",
+    "pdf-monkey",
+    "pdfshift",
+    "pixepi",
+    "quietforge",
+    "rossum",
+    "sensible-io",
+    "sensible-so",
+    "signwell",
+    "snapapi-pics",
+    "social-fetch",
+    "spider-cloud",
+    "structify",
+    "superai",
+    "tinyfish",
+    "urlbox",
+    "v7-labs",
+    "warppay402-com",
+    "webcrawlerapi-com",
+    "workist",
+    "xquik-api"
+   ],
+   "snake_case": [
+    "affinda",
+    "airslate",
+    "bem",
+    "bright-data",
+    "brightdata",
+    "chroniclingamerica",
+    "chunkr-ai",
+    "claix-dev",
+    "docling",
+    "docraptor",
+    "docspring",
+    "docsumo",
+    "doctly-ai",
+    "docupanda",
+    "eden-ai",
+    "getemboss-ai",
+    "hyperscience",
+    "instabase",
+    "landingai",
+    "machinelibrary-ai",
+    "mathpix",
+    "mistral",
+    "nace-ai",
+    "nanonets",
+    "nimbleway",
+    "ocrolus",
+    "parseflow",
+    "parsehub",
+    "parseur",
+    "parsio",
+    "pdfendpoint",
+    "pdffiller",
+    "pdfshift",
+    "qomplement",
+    "reducto",
+    "reducto-ai",
+    "sensible-io",
+    "sensible-so",
+    "soax",
+    "socialcrawl",
+    "sorsa",
+    "structify",
+    "superai",
+    "tensorlake",
+    "unstructured",
+    "v7-labs",
+    "zuva"
+   ],
+   "camelCase": [
+    "abbyy",
+    "adobe",
+    "apache-poi",
+    "azure-document-intelligence",
+    "bem",
+    "bluebeam",
+    "canoe-intelligence",
+    "carbone",
+    "cloro-dev",
+    "convertapi",
+    "conxai",
+    "crawl4ai",
+    "diffbot",
+    "docparser",
+    "eigenpal",
+    "evisort",
+    "extend-ai",
+    "firecrawl",
+    "gonitro",
+    "google-cloud-document-ai",
+    "hyperbrowser",
+    "import-io",
+    "konbiniapi",
+    "nitro-software",
+    "openenvoy",
+    "oxylabs",
+    "pdfgeneratorapi",
+    "s1-dev",
+    "snapapi-pics",
+    "social-fetch",
+    "socialcrawl",
+    "tinyfish",
+    "uipath",
+    "urlbox",
+    "veryfi",
+    "warppay402-com",
+    "xceptor",
+    "xquik-api"
+   ],
+   "other": [
+    "airslate",
+    "conxai",
+    "getemboss-ai",
+    "pdfshift"
+   ],
+   "kebab-case": [
+    "instabase",
+    "sensible-so"
+   ]
+  },
+  "property": {
+   "lower": [
+    "adobe",
+    "affinda",
+    "automat",
+    "chunkr-ai",
+    "diffbot",
+    "docparser",
+    "docupanda",
+    "done",
+    "eden-ai",
+    "extend-ai",
+    "firecrawl",
+    "gonitro",
+    "google-cloud-document-ai",
+    "hyperbrowser",
+    "import-io",
+    "landingai",
+    "machinelibrary-ai",
+    "mercury-hq-com",
+    "mistral",
+    "nace-ai",
+    "nimbleway",
+    "parseur",
+    "parsio",
+    "pdf-co",
+    "reducto",
+    "reducto-ai",
+    "runautomat",
+    "s1-dev",
+    "schemaextract",
+    "schemasure",
+    "sensible-io",
+    "sensible-so",
+    "snapapi-pics",
+    "social-fetch",
+    "socialcrawl",
+    "tensorlake",
+    "uipath",
+    "xquik-api",
+    "zuva",
+    "zyte"
+   ],
+   "camelCase": [
+    "adobe",
+    "affinda",
+    "diffbot",
+    "docupanda",
+    "extend-ai",
+    "firecrawl",
+    "gonitro",
+    "google-cloud-document-ai",
+    "hyperbrowser",
+    "import-io",
+    "mercury-hq-com",
+    "pdf-co",
+    "s1-dev",
+    "schemasure",
+    "sensible-so",
+    "snapapi-pics",
+    "social-fetch",
+    "uipath",
+    "xquik-api",
+    "zyte"
+   ],
+   "snake_case": [
+    "affinda",
+    "chunkr-ai",
+    "done",
+    "eden-ai",
+    "landingai",
+    "machinelibrary-ai",
+    "mistral",
+    "nace-ai",
+    "nimbleway",
+    "parseur",
+    "parsio",
+    "reducto",
+    "reducto-ai",
+    "s1-dev",
+    "schemaextract",
+    "sensible-io",
+    "sensible-so",
+    "socialcrawl",
+    "tensorlake",
+    "zuva"
+   ],
+   "PascalCase": [
+    "convertapi"
+   ],
+   "other": [
+    "nimbleway"
+   ]
+  }
+ }
+}

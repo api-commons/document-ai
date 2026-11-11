@@ -1,0 +1,18 @@
+provider: docupanda
+apis_io: https://apis.io/providers/docupanda/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - analyses
+    - extractions
+    properties:
+      id:
+      - jobId
+      - extractionId
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/docupanda-docupipe-openapi.yml#DELETE /analyses
+    - openapi/_original/docupanda-docupipe-openapi.yml#GET /analyses
+    - openapi/_original/docupanda-docupipe-openapi.yml#GET /extractions

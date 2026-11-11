@@ -1,0 +1,13 @@
+provider: zyte
+apis_io: https://apis.io/providers/zyte/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - extract
+    properties:
+      id: jobId
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/zyte-zyte-api-openapi.yaml#POST /extract

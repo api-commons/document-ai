@@ -1,0 +1,209 @@
+context: document-ai
+name: Document AI
+generated: '2026-11-11'
+version: 0.1.0-draft.20261111
+status: draft
+cohort:
+  tags:
+  - Document AI
+  - OCR
+  - Data Extraction
+  - Document Processing
+  - Intelligent Document Processing
+  - IDP
+  - PDF
+  - Document Parsing
+  providers_with_harvested_openapi: 132
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded:
+  extraction:
+    diffbot: /analyze extracts web pages, not documents
+duplicates:
+  gonitro:
+  - nitro-software
+  sensible-so:
+  - sensible-io
+shared_specs: {}
+concepts:
+  extraction:
+    segments_seen:
+      extract: 25
+      parse: 10
+      ocr: 5
+      extractions: 5
+      analyze: 2
+      analyses: 1
+      jobs: 1
+      recognitions: 1
+      extraction: 1
+    providers_exposing: 35
+    providers_with_readable_schema: 33
+    operations:
+    - operation: POST collection
+      providers: 32
+      share: 0.914
+      tier: core
+    - operation: GET collection
+      providers: 10
+      share: 0.286
+      tier: extended
+    - operation: GET item
+      providers: 7
+      share: 0.2
+      tier: extended
+    - operation: DELETE collection
+      providers: 1
+      share: 0.029
+      tier: long-tail
+    - operation: DELETE item
+      providers: 1
+      share: 0.029
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.029
+      tier: long-tail
+    - operation: UPDATE item
+      providers: 1
+      share: 0.029
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 18
+      share: 0.545
+      type: string
+      spellings:
+      - id
+      - jobId
+      - job_id
+      - request_id
+      - extractionId
+    - name: status
+      tier: core
+      providers: 17
+      share: 0.515
+      type: string
+      spellings:
+      - status
+      - state
+    - name: document_url
+      tier: extended
+      providers: 13
+      share: 0.394
+      type: string
+      spellings:
+      - file
+      - input
+      - file_url
+      - document
+      - document_url
+      - source
+    - name: created_at
+      tier: extended
+      providers: 10
+      share: 0.303
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - created
+    - name: schema
+      tier: extended
+      providers: 9
+      share: 0.273
+      type: object
+      spellings:
+      - schema
+    long_tail_count: 430
+    long_tail_sample:
+    - completed_at
+    - error
+    - fields
+    - metadata
+    - parser_id
+    - pages
+    - prompt
+    - text
+    - content_type
+    - duration
+    - file_id
+    - filename
+    - name
+    - options
+    - output_url
+    - settings
+    - started_at
+    - usage
+    - wait_for
+    - actions
+    - batch_id
+    - bounding_box
+    - chunks
+    - completed
+    - configuration
+    - device
+    - enhance
+    - expires_at
+    - failure_reason
+    - file_name
+    - formatting
+    - instructions
+    - json_schema
+    - language
+    - markdown_url
+    - network_capture
+    - ok
+    - parse_mode
+    - pdf_url
+    - response_type
+  extractor:
+    segments_seen:
+      extractors: 1
+      processors: 1
+      document_types: 1
+    providers_exposing: 2
+    providers_with_readable_schema: 2
+    operations:
+    - operation: GET collection
+      providers: 2
+      share: 1.0
+      tier: long-tail
+    - operation: GET item
+      providers: 2
+      share: 1.0
+      tier: long-tail
+    - operation: POST collection
+      providers: 2
+      share: 1.0
+      tier: long-tail
+    - operation: DELETE item
+      providers: 1
+      share: 0.5
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.5
+      tier: long-tail
+    - operation: UPDATE item
+      providers: 1
+      share: 0.5
+      tier: long-tail
+    properties: []
+    long_tail_count: 12
+    long_tail_sample:
+    - created_at
+    - id
+    - name
+    - clone_extractor_id
+    - clone_processor_id
+    - config
+    - draft_version
+    - fields
+    - generate
+    - type
+    - updated_at
+    - versions

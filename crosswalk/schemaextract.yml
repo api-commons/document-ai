@@ -1,0 +1,14 @@
+provider: schemaextract
+apis_io: https://apis.io/providers/schemaextract/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - extract
+    properties:
+      schema: schema
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/schemaextract-openapi.json#POST /v1/extract
+    - openapi/_original/schemaextract-openapi.yml#POST /v1/extract

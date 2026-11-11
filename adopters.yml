@@ -1,0 +1,180 @@
+context: document-ai
+generated: '2026-11-11'
+adopters:
+- provider: adobe
+  apis_io: https://apis.io/providers/adobe/
+  crosswalk: crosswalk/adobe.yml
+  concepts:
+  - extraction
+- provider: automat
+  apis_io: https://apis.io/providers/automat/
+  crosswalk: crosswalk/automat.yml
+  concepts:
+  - extraction
+- provider: chunkr-ai
+  apis_io: https://apis.io/providers/chunkr-ai/
+  crosswalk: crosswalk/chunkr-ai.yml
+  concepts:
+  - extraction
+- provider: convertapi
+  apis_io: https://apis.io/providers/convertapi/
+  crosswalk: crosswalk/convertapi.yml
+  concepts:
+  - extraction
+- provider: docupanda
+  apis_io: https://apis.io/providers/docupanda/
+  crosswalk: crosswalk/docupanda.yml
+  concepts:
+  - extraction
+- provider: done
+  apis_io: https://apis.io/providers/done/
+  crosswalk: crosswalk/done.yml
+  concepts:
+  - extraction
+- provider: eden-ai
+  apis_io: https://apis.io/providers/eden-ai/
+  crosswalk: crosswalk/eden-ai.yml
+  concepts:
+  - extraction
+- provider: extend-ai
+  apis_io: https://apis.io/providers/extend-ai/
+  crosswalk: crosswalk/extend-ai.yml
+  concepts:
+  - extraction
+  - extractor
+- provider: firecrawl
+  apis_io: https://apis.io/providers/firecrawl/
+  crosswalk: crosswalk/firecrawl.yml
+  concepts:
+  - extraction
+- provider: gonitro
+  apis_io: https://apis.io/providers/gonitro/
+  crosswalk: crosswalk/gonitro.yml
+  concepts:
+  - extraction
+- provider: hyperbrowser
+  apis_io: https://apis.io/providers/hyperbrowser/
+  crosswalk: crosswalk/hyperbrowser.yml
+  concepts:
+  - extraction
+- provider: landingai
+  apis_io: https://apis.io/providers/landingai/
+  crosswalk: crosswalk/landingai.yml
+  concepts:
+  - extraction
+- provider: machinelibrary-ai
+  apis_io: https://apis.io/providers/machinelibrary-ai/
+  crosswalk: crosswalk/machinelibrary-ai.yml
+  concepts:
+  - extraction
+- provider: mercury-hq-com
+  apis_io: https://apis.io/providers/mercury-hq-com/
+  crosswalk: crosswalk/mercury-hq-com.yml
+  concepts:
+  - extraction
+- provider: mistral
+  apis_io: https://apis.io/providers/mistral/
+  crosswalk: crosswalk/mistral.yml
+  concepts:
+  - extraction
+- provider: nace-ai
+  apis_io: https://apis.io/providers/nace-ai/
+  crosswalk: crosswalk/nace-ai.yml
+  concepts:
+  - extraction
+- provider: nimbleway
+  apis_io: https://apis.io/providers/nimbleway/
+  crosswalk: crosswalk/nimbleway.yml
+  concepts:
+  - extraction
+- provider: parseflow
+  apis_io: https://apis.io/providers/parseflow/
+  crosswalk: crosswalk/parseflow.yml
+  concepts:
+  - extraction
+- provider: parsio
+  apis_io: https://apis.io/providers/parsio/
+  crosswalk: crosswalk/parsio.yml
+  concepts:
+  - extraction
+- provider: pdf-co
+  apis_io: https://apis.io/providers/pdf-co/
+  crosswalk: crosswalk/pdf-co.yml
+  concepts:
+  - extraction
+- provider: qomplement
+  apis_io: https://apis.io/providers/qomplement/
+  crosswalk: crosswalk/qomplement.yml
+  concepts:
+  - extraction
+- provider: reducto
+  apis_io: https://apis.io/providers/reducto/
+  crosswalk: crosswalk/reducto.yml
+  concepts:
+  - extraction
+- provider: reducto-ai
+  apis_io: https://apis.io/providers/reducto-ai/
+  crosswalk: crosswalk/reducto-ai.yml
+  concepts:
+  - extraction
+- provider: runautomat
+  apis_io: https://apis.io/providers/runautomat/
+  crosswalk: crosswalk/runautomat.yml
+  concepts:
+  - extraction
+- provider: s1-dev
+  apis_io: https://apis.io/providers/s1-dev/
+  crosswalk: crosswalk/s1-dev.yml
+  concepts:
+  - extraction
+- provider: schemaextract
+  apis_io: https://apis.io/providers/schemaextract/
+  crosswalk: crosswalk/schemaextract.yml
+  concepts:
+  - extraction
+- provider: schemasure
+  apis_io: https://apis.io/providers/schemasure/
+  crosswalk: crosswalk/schemasure.yml
+  concepts:
+  - extraction
+- provider: sensible-so
+  apis_io: https://apis.io/providers/sensible-so/
+  crosswalk: crosswalk/sensible-so.yml
+  concepts:
+  - extraction
+  - extractor
+- provider: snapapi-pics
+  apis_io: https://apis.io/providers/snapapi-pics/
+  crosswalk: crosswalk/snapapi-pics.yml
+  concepts:
+  - extraction
+- provider: social-fetch
+  apis_io: https://apis.io/providers/social-fetch/
+  crosswalk: crosswalk/social-fetch.yml
+  concepts:
+  - extraction
+- provider: socialcrawl
+  apis_io: https://apis.io/providers/socialcrawl/
+  crosswalk: crosswalk/socialcrawl.yml
+  concepts:
+  - extraction
+- provider: tensorlake
+  apis_io: https://apis.io/providers/tensorlake/
+  crosswalk: crosswalk/tensorlake.yml
+  concepts:
+  - extraction
+- provider: xquik-api
+  apis_io: https://apis.io/providers/xquik-api/
+  crosswalk: crosswalk/xquik-api.yml
+  concepts:
+  - extraction
+- provider: zuva
+  apis_io: https://apis.io/providers/zuva/
+  crosswalk: crosswalk/zuva.yml
+  concepts:
+  - extraction
+- provider: zyte
+  apis_io: https://apis.io/providers/zyte/
+  crosswalk: crosswalk/zyte.yml
+  concepts:
+  - extraction

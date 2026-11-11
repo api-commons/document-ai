@@ -1,0 +1,17 @@
+provider: socialcrawl
+apis_io: https://apis.io/providers/socialcrawl/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - extract
+    - parse
+    properties:
+      id: request_id
+      document_url: file
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/socialcrawl-openapi-slim.json#GET /tavily/extract
+    - openapi/_original/socialcrawl-openapi-slim.json#GET /web/extract
+    - openapi/_original/socialcrawl-openapi-slim.json#POST /web/parse

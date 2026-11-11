@@ -1,0 +1,14 @@
+provider: gonitro
+apis_io: https://apis.io/providers/gonitro/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - extractions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/gonitro-pdf-services-openapi.json#POST /extractions
+    - openapi/_original/gonitro-sign-openapi.json#POST /extractions
+    - openapi/_original/nitro-software-openapi-original.json#POST /extractions

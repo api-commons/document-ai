@@ -1,0 +1,14 @@
+provider: parsio
+apis_io: https://apis.io/providers/parsio/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - parse
+    properties:
+      status: status
+      created_at: created_at
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/parsio-openapi.yml#POST /docs/{document_id}/parse

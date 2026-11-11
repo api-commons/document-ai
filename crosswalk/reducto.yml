@@ -1,0 +1,16 @@
+provider: reducto
+apis_io: https://apis.io/providers/reducto/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - parse
+    - extract
+    properties:
+      id: job_id
+      document_url: input
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/reducto-document-api-openapi.yml#POST /extract
+    - openapi/_original/reducto-document-api-openapi.yml#POST /parse

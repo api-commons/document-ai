@@ -1,0 +1,13 @@
+provider: s1-dev
+apis_io: https://apis.io/providers/s1-dev/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - extract
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/s1-dev-openapi.yml#POST /extract
+    - openapi/_original/search1api-openapi.json#POST /extract

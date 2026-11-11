@@ -1,0 +1,12 @@
+provider: qomplement
+apis_io: https://apis.io/providers/qomplement/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - extract
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/qomplement-openapi-original.json#POST /v1/extract

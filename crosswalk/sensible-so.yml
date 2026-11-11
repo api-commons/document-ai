@@ -1,0 +1,31 @@
+provider: sensible-so
+apis_io: https://apis.io/providers/sensible-so/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - extract
+    - extractions
+    properties:
+      id: id
+      status: status
+      document_url: document_url
+      created_at: created
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sensible-io-openapi.yml#POST /extract/{document_type}
+    - openapi/_original/sensible-io-openapi.yml#PUT /extractions/{id}
+    - openapi/_original/sensible-extractions-api-openapi.yml#GET /extractions
+    - openapi/_original/sensible-extractions-api-openapi.yml#POST /extract/{document_type}
+  extractor:
+    path_segment:
+    - document_types
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/sensible-io-openapi.yml#DELETE /document_types/{id}
+    - openapi/_original/sensible-io-openapi.yml#GET /document_types
+    - openapi/_original/sensible-io-openapi.yml#GET /document_types/{id}
+    - openapi/_original/sensible-io-openapi.yml#POST /document_types
+    - openapi/_original/sensible-io-openapi.yml#PUT /document_types/{id}

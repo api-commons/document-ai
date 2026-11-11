@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/document-ai/main/schema/extraction.json",
+  "title": "Extraction",
+  "description": "The common extraction in Document AI, distilled from 33 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.545,
+      "x-commons-providers": 18,
+      "x-commons-spellings": [
+        "id",
+        "jobId",
+        "job_id",
+        "request_id",
+        "extractionId"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.515,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "status",
+        "state"
+      ]
+    },
+    "document_url": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.394,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "file",
+        "input",
+        "file_url",
+        "document",
+        "document_url",
+        "source"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.303,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created"
+      ],
+      "format": "date-time"
+    },
+    "schema": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.273,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "schema"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "document-ai",
+    "concept": "extraction",
+    "providers": 33,
+    "generated": "2026-11-11",
+    "version": "0.1.0-draft.20261111",
+    "status": "draft"
+  }
+}

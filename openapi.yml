@@ -1,0 +1,90 @@
+openapi: 3.1.0
+info:
+  title: Document AI (API Commons)
+  version: 0.1.0-draft.20261111
+  description: 'The common Document AI interface, distilled from the harvested OpenAPI of 132 providers in the APIs.io
+    catalog. Not a product: no one serves this API. It is the shape the market already shares, measured, so that
+    providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /extractions:
+    post:
+      operationId: createExtraction
+      summary: Create an extraction
+      tags:
+      - Extractions
+      x-commons-tier: core
+      x-commons-share: 0.914
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id001
+                $ref: '#/components/schemas/Extraction'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+    get:
+      operationId: listExtractions
+      summary: List extractions
+      tags:
+      - Extractions
+      x-commons-tier: extended
+      x-commons-share: 0.286
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id001
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /extractions/{extraction_id}:
+    parameters:
+    - $ref: '#/components/parameters/extraction_id'
+    get:
+      operationId: getExtraction
+      summary: Get an extraction
+      tags:
+      - Extractions
+      x-commons-tier: extended
+      x-commons-share: 0.2
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+components:
+  schemas:
+    Extraction:
+      $ref: ./schema/extraction.json
+    Extractor:
+      $ref: ./schema/extractor.json
+  parameters:
+    extraction_id:
+      name: extraction_id
+      in: path
+      required: true
+      schema:
+        type: string
+    extractor_id:
+      name: extractor_id
+      in: path
+      required: true
+      schema:
+        type: string

@@ -1,0 +1,20 @@
+provider: chunkr-ai
+apis_io: https://apis.io/providers/chunkr-ai/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - extract
+    - parse
+    properties:
+      status: status
+      document_url: file
+      created_at: created_at
+      schema: schema
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/chunkr-ai-openapi.json#GET /tasks/{task_id}/extract
+    - openapi/_original/chunkr-ai-openapi.json#GET /tasks/{task_id}/parse
+    - openapi/_original/chunkr-ai-openapi.json#POST /tasks/extract
+    - openapi/_original/chunkr-ai-openapi.json#POST /tasks/parse

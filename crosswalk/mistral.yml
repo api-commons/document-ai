@@ -1,0 +1,14 @@
+provider: mistral
+apis_io: https://apis.io/providers/mistral/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - ocr
+    properties:
+      id: id
+      document_url: document
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/mistral-ocr-openapi.yml#POST /ocr

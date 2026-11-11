@@ -1,0 +1,20 @@
+provider: zuva
+apis_io: https://apis.io/providers/zuva/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - extraction
+    - ocr
+    - extractions
+    properties:
+      id: request_id
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/zuva-openapi.yml#GET /extraction/{request_id}
+    - openapi/_original/zuva-openapi.yml#GET /extractions
+    - openapi/_original/zuva-openapi.yml#GET /ocr/{request_id}
+    - openapi/_original/zuva-openapi.yml#POST /extraction
+    - openapi/_original/zuva-openapi.yml#POST /ocr

@@ -1,0 +1,14 @@
+provider: social-fetch
+apis_io: https://apis.io/providers/social-fetch/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - extract
+    properties:
+      status: status
+      schema: schema
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/social-fetch-openapi.json#POST /v1/web/extract

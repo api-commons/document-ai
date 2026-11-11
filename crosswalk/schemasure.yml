@@ -1,0 +1,15 @@
+provider: schemasure
+apis_io: https://apis.io/providers/schemasure/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - extract
+    properties:
+      document_url: input
+      schema: schema
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/schemasure-openapi.json#POST /extract
+    - openapi/_original/schemasure-openapi.json#POST /v2/extract

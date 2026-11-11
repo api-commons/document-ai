@@ -1,0 +1,21 @@
+provider: tensorlake
+apis_io: https://apis.io/providers/tensorlake/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - parse
+    - extract
+    properties:
+      id: id
+      status: status
+      document_url: file_url
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/tensorlake-openapi.yml#DELETE /documents/v2/parse/{parse_id}
+    - openapi/_original/tensorlake-openapi.yml#GET /documents/v2/parse
+    - openapi/_original/tensorlake-openapi.yml#GET /documents/v2/parse/{parse_id}
+    - openapi/_original/tensorlake-openapi.yml#POST /documents/v2/extract
+    - openapi/_original/tensorlake-openapi.yml#POST /documents/v2/parse

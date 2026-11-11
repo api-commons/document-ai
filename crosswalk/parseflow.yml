@@ -1,0 +1,12 @@
+provider: parseflow
+apis_io: https://apis.io/providers/parseflow/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - analyze
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/parseflow-openapi.json#POST /v2/analyze

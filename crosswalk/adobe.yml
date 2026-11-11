@@ -1,0 +1,14 @@
+provider: adobe
+apis_io: https://apis.io/providers/adobe/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - ocr
+    properties:
+      status: status
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/adobe-pdf-services-api-openapi-official.json#POST /operation/ocr
+    - openapi/_original/adobe-pdf-services-api-openapi.yml#POST /operation/ocr

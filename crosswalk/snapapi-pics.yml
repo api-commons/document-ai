@@ -1,0 +1,15 @@
+provider: snapapi-pics
+apis_io: https://apis.io/providers/snapapi-pics/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - extract
+    - analyze
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/snapapi-pics-openapi.json#GET /v1/extract
+    - openapi/_original/snapapi-pics-openapi.json#POST /v1/analyze
+    - openapi/_original/snapapi-pics-openapi.json#POST /v1/extract

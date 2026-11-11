@@ -1,0 +1,15 @@
+provider: done
+apis_io: https://apis.io/providers/done/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - extract
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/done-seo-data-extractor-openapi.json#POST /extract
+    - openapi/_original/done-seo-data-extractor-openapi.yml#POST /extract
+    - openapi/_original/done-sitemap-url-extractor-openapi.json#POST /extract
+    - openapi/_original/done-sitemap-url-extractor-openapi.yml#POST /extract

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/document-ai/main/schema/extractor.json",
+  "title": "Extractor",
+  "description": "The common extractor in Document AI, distilled from 2 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {},
+  "required": [],
+  "x-commons": {
+    "context": "document-ai",
+    "concept": "extractor",
+    "providers": 2,
+    "generated": "2026-11-11",
+    "version": "0.1.0-draft.20261111",
+    "status": "draft"
+  }
+}

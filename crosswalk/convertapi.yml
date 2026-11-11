@@ -1,0 +1,16 @@
+provider: convertapi
+apis_io: https://apis.io/providers/convertapi/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - extract
+    - ocr
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openapi.json#POST /convert/email/to/extract
+    - openapi/_original/openapi.json#POST /convert/pdf/to/extract
+    - openapi/_original/openapi.json#POST /convert/pdf/to/ocr
+    - openapi/_original/openapi.json#POST /convert/zip/to/extract

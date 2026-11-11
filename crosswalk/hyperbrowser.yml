@@ -1,0 +1,16 @@
+provider: hyperbrowser
+apis_io: https://apis.io/providers/hyperbrowser/
+context: document-ai
+generated: '2026-11-11'
+concepts:
+  extraction:
+    path_segment:
+    - extract
+    properties:
+      id: jobId
+      status: status
+      schema: schema
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/hyperbrowser-openapi.json#GET /api/extract/{id}
+    - openapi/_original/hyperbrowser-openapi.json#POST /api/extract
